@@ -1,0 +1,402 @@
+/*general*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: whitesmoke;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+p{
+    color: rgb(85, 85, 85);
+}
+
+a, button{
+  transition: all 300ms ease;
+}
+
+section{
+    padding-top: 4vh;
+    min-height: 96vh;
+    height: auto;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    height: fit-content;
+}
+
+
+#icon-pic{
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    z-index: 11;
+    position: fixed;
+    margin-left: 35px;
+    margin-top: 15px;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+/*desktop nav*/
+#desktop-nav{
+    display: flex;
+    justify-content: space-around;
+    height: 15vh;
+    align-items: center;
+    position: fixed;
+    background-color: whitesmoke;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.logo{
+    font-size: 2rem;
+    cursor: default;
+}
+
+.link-btn{
+    display: flex;
+    justify-content: space-evenly;
+    gap:1rem;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    font-size: 1.5rem;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover{
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+#theme-btn{
+    display: flex;
+    align-items: center;
+}
+
+#theme{
+    object-fit: cover;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    object-fit: fill;
+    color: white;
+}
+
+/*profile*/
+#profile{
+    display: flex;
+    justify-content: center;
+    gap: 3.5rem;
+    height: 83vh;
+    margin: 0;
+}
+
+.section-pic{
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+#me-1{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.section-text-profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+    text-align: center;
+}
+
+.section-text-profile p{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.section-text-profile h1{
+    font-size: 3rem;
+}
+
+#buttons-profile{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn-profile{
+    border: 0.1rem solid;
+    border-radius: 2rem;
+    padding: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    width: 8rem;
+}
+
+#btn-1{
+    background-color: white;
+}
+
+#btn-2{
+    background-color: rgb(53, 53, 53);
+    color: white;
+}
+
+#btn-1:hover{
+    background-color: rgb(53, 53, 53);
+    color: white;
+}
+
+#btn-2:hover{
+    background-color: black;
+    color: white;
+}
+
+#socials-profile{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.socials{
+    height: 2rem;
+    width: 2rem;
+    transition: filter 300ms ease;
+}
+
+.socials:hover{
+    filter: grayscale(80%) drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+.hr-line{
+    border: 0;
+    height: 1px;
+    width: 30%;
+    margin: 0 auto;
+    background-image: linear-gradient(to right, rgba(200, 200, 200, 0), rgba(200, 200, 200, 0.75), rgba(200, 200, 200, 0));
+}
+
+/*about*/
+#about{
+    margin: 0;
+}
+#section-header{
+    text-align: center;
+}
+
+#section-header h1{
+    font-size: 3rem;
+}
+
+#about-details{
+    display: flex;
+    justify-content: center;
+    gap: 3.5rem;
+}
+
+#about-pic, #about-text{
+    height: 400px;
+    width: 400px;
+}
+
+#me-2{
+    height: 400px;
+    width: 400px;
+    border-radius: 2rem;
+}
+
+#about-text{
+    display: flex;
+    flex-direction: column;
+    height: 390px;
+    width: 580px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.sub-header{
+    height: 180px;
+    border-radius: 2rem;
+}
+
+.about-para{
+    height: 220px;
+    border-radius: 2rem;
+    margin-left: 10px;
+}
+
+.sub-header{
+    display: flex;
+}
+
+#sub1, #sub2{
+    height: 80%;
+    width: 50%;
+    border-radius: 2rem;
+    margin: 1rem 1rem;
+    border: 0.1rem solid black;
+    text-align: center;
+}
+
+#para{
+    margin: 10px;
+}
+
+#sub1, #sub2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.sub1-pic{
+    display: flex;
+    flex-direction: column;
+    height: 2rem;
+    width: 2rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.sub2-pic{
+    display: flex;
+    flex-direction: column;
+    height: 2rem;
+    width: 2rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+/*education*/
+#education{
+    margin: 0 5rem;
+}
+#edu-content{
+    display: flex;
+    gap: 5vh;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#edu-card{
+    height: 27vw;
+    width: 27vw;
+    border-radius: 2rem;
+    margin-bottom: 5vh;
+    border: 0.1rem solid black;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: width 500ms, border-radius 500ms, transform 0.3s;
+}
+#edu-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#edu-img{
+    border-bottom: 0.1rem solid black;
+    height: 40%;
+    width: 100%;
+    overflow: hidden;
+}
+#edu-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#edu-text{
+    padding: 1rem 0.5rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+/*blogs*/
+.blog-card{
+    width: 96%;
+    height: 120px;
+    padding: 2%;
+    border: 0.1rem black solid;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+
+.archive{
+    height: 40px;
+    border: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*contact*/
+#contacts{
+    min-height: fit-content;
+}
+
+#contact-card{
+    height: 50px;
+    width: 450px;
+    border: 0.1rem solid black;
+    border-radius: 2rem;
+    display: flex;
+    padding: 25px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.contact-icon{
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.contact-link{
+    font-size: 1.3rem
+}
+
+/*scrollbar*/
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+    border: 3px solid whitesmoke;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
