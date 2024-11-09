@@ -236,6 +236,7 @@ a:hover{
     height: 400px;
     width: 400px;
     border-radius: 2rem;
+    object-fit: cover;
 }
 
 #about-text{
