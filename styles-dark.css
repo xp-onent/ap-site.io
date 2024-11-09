@@ -311,7 +311,7 @@ a:hover{
     display: flex;
     gap: 5vh;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 #edu-card{
     height: 27vw;

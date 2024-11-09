@@ -304,7 +304,7 @@ a:hover{
     display: flex;
     gap: 5vh;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 #edu-card{
     height: 27vw;
@@ -334,10 +334,9 @@ a:hover{
 }
 #edu-text{
     padding: 1rem 0.5rem;
-    text-align: center;
     overflow: hidden;
+    text-align: center;
 }
-
 /*blogs*/
 .blog-card{
     width: 96%;
