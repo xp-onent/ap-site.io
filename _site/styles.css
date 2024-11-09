@@ -334,9 +334,10 @@ a:hover{
 }
 #edu-text{
     padding: 1rem 0.5rem;
-    overflow: hidden;
     text-align: center;
+    overflow: hidden;
 }
+
 /*blogs*/
 .blog-card{
     width: 96%;
