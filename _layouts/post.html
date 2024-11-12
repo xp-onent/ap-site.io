@@ -2,22 +2,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ '/assests/post.css' | relative_url }}"> 
-    <link rel="stylesheet" id="stylesheet" href="{{ '/assests/post.css' | relative_url }}">
+    <link rel="stylesheet" class="theme-stylesheet"  href="{{ '/assests/post.css' | relative_url }}"> 
     <title>{{page.title}} | Ayush Pandey</title>
 </head>
 <body>
     <nav>
         <div id="nav-1">
-            <img src="../assests/profile.png" alt="">
+            <img src="{{ '/assests/profile.png' | relative_url }}"alt="profile">
             <h1 id="logo"> {{ site.title }} </h1>
         </div>
         <div id="nav-links">
-            <a href="https://scholar.google.com/citations?user=4IgRBVMAAAAJ&hl=en" target="_blank"><img class="socials" src="../assests/google-scholar.png" alt="google-scholar"></a>
-            <a href="https://www.researchgate.net/profile/Ayush-Pandey-11" target="_blank"><img class="socials" src="../assests/researchgate.png" alt="researchgate"></a>
-            <a href="https://twitter.com/AyushPandey__" target="_blank"><img class="socials" src="../assests/X_logo_2023_original.png" alt="x-profile"></a>
-            <a href="https://github.com/AyushPandey0809" target="_blank"><img class="socials" src="../assests/github.png" alt="github"></a>
-            <a href="/index.html" target="_blank" id="home-link"><h3>Home</h3></a>
+            <a href="https://scholar.google.com/citations?user=4IgRBVMAAAAJ&hl=en" target="_blank"><img class="socials" src="{{ '/assests/google-scholar.png' | relative_url }}" alt="google-scholar"></a>
+            <a href="https://www.researchgate.net/profile/Ayush-Pandey-11" target="_blank"><img class="socials" src="{{ '/assests/researchgate.png' | relative_url }}" alt="researchgate"></a>
+            <a href="https://twitter.com/AyushPandey__" target="_blank"><img class="socials" src="{{ '/assests/X_logo_2023_original.png' | relative_url }}" alt="x-profile"></a>
+            <a href="https://github.com/AyushPandey0809" target="_blank"><img class="socials" src="{{ '/assests/github.png' | relative_url }}" alt="github"></a>
+            <a href="{{ '/index.html' | relative_url }}" target="_blank" id="home-link"><h3>Home</h3></a>
             <div id="theme-btn">
                 <img id="theme" src="{{ '/assests/moon.png' | relative_url }}" alt="Theme toggle button">
             </div>
