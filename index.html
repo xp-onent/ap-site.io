@@ -19,7 +19,7 @@ title: Home
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
-                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#blogs">Statements</a></li>
                 <li><a href="#contacts">Contacts</a></li>
             </ul>
             <div id="theme-btn"><img src="./assests/moon.png" id="theme" alt="moon"></div>
@@ -48,7 +48,6 @@ title: Home
     <!---->
     <section id="about">
         <div id="section-header">
-            <p>Get To Know More</p>
             <h1 class="title">About Me</h1>
         </div>
         <div id="about-details">
@@ -81,7 +80,6 @@ title: Home
     <!---->
     <section id="education">
         <div id="section-header">
-            <p>Uncover The Details Of My</p>
             <h1 class="title">Education</h1>
         </div>
         <div id="edu-content">
@@ -110,21 +108,39 @@ title: Home
     <!---->
     <section id="blogs">
         <div id="section-header">
-            <p>Explore My Latest</p>
-            <h1 class="title">Blogs</h1>
+            <h1 class="title">Statements</h1>
         </div>
-        {% for post in site.posts limit:3 %}
-        <a href="{{ post.url | relative_url }}" target="_blank">
-            <div class="blog-card" id="blog-{{ forloop.index0 }}">
-                <h3>{{ post.title }}</h3>
-                <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
-            </div>
-        </a>
-      {% endfor %}
-      <div class="archive">
-        <a href="{{ '/blogs/blogs.html' | relative_url }}" target="_blank"><i>Read all my work →</i></a>
-      </div>
+    
+        {% assign featured_posts = site.posts | where: "featured", true | sort: "date" | reverse %}
+        {% assign posts_to_display = featured_posts | slice: 0, 3 %}
+    
+        {% if posts_to_display.size > 0 %}
+            <!-- Show up to 3 featured blogs -->
+            {% for post in posts_to_display %}
+                <a href="{{ post.url | relative_url }}" target="_blank">
+                    <div class="blog-card" id="blog-{{ forloop.index0 }}">
+                        <h3>{{ post.title }}</h3>
+                        <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        {% else %}
+            <!-- If no featured posts, show the 3 most recent blogs -->
+            {% for post in site.posts limit: 3 %}
+                <a href="{{ post.url | relative_url }}" target="_blank">
+                    <div class="blog-card" id="blog-{{ forloop.index0 }}">
+                        <h3>{{ post.title }}</h3>
+                        <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        {% endif %}
+    
+        <div class="archive">
+            <a href="{{ '/blogs/blogs.html' | relative_url }}" target="_blank"><i>Read my other work →</i></a>
+        </div>
     </section>
+    
     <!---->
     <section id="contacts">
         <div id="section-header">
