@@ -427,6 +427,7 @@ a:hover{
     #mobile-nav {
         display: flex;
         justify-content: space-between;
+        height: 4vh;
         padding: 5%;
     }
 
@@ -437,5 +438,45 @@ a:hover{
     #theme {
         height: 18px;
         object-fit: cover;
+    }
+
+    /*mobile profile*/
+    #profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-height: 96vh;
+        padding: 30% 0;
+    }
+    
+    .section-pic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    #me-1 {
+        height: 30vh;
+        width: 30vh;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .section-text-profile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px; 
+    }
+
+    .section-text-profile>p{
+        font-size: 1rem;
+    }
+    .section-text-profile>h1{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
     }
   }
