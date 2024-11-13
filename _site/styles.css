@@ -58,6 +58,10 @@ section{
     z-index: 10;
 }
 
+#mobile-bav{
+    display: none;
+}
+
 .logo{
     font-size: 2rem;
     cursor: default;

@@ -57,6 +57,10 @@ section{
     z-index: 10;
 }
 
+#mobile-nav{
+    display: none;
+}
+
 .logo{
     font-size: 2rem;
     cursor: default;
@@ -411,3 +415,27 @@ a:hover{
 ::-webkit-scrollbar-thumb:hover {
     background: #e7e6e6;
 }
+
+
+/*styles for mobile devices*/
+@media only screen and (max-width: 768px) {
+    /*mobile nav*/
+    #desktop-nav {
+        display: none;
+    }
+
+    #mobile-nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 5%;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    #theme {
+        height: 18px;
+        object-fit: cover;
+    }
+  }
