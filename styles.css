@@ -31,6 +31,9 @@ section{
     height: fit-content;
 }
 
+#about, #education, #blogs{
+    padding-top: 16vh;
+}
 
 #icon-pic{
     height: 70px;
