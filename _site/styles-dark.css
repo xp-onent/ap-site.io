@@ -558,6 +558,10 @@ a:hover{
         width: 80%;
     }
 
+    .about-para{
+        height: auto;
+    }
+
     /*mobile education*/
     #education{
         display: flex;
