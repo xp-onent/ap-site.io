@@ -434,6 +434,7 @@ a:hover{
 
     section{
         overflow: hidden;
+        box-sizing: border-box;
     }
 
     #icon-pic{
@@ -563,6 +564,9 @@ a:hover{
         flex-direction: column;
         padding: 0;
         margin-top: 30px;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     #education > #section-header >.title{
@@ -581,7 +585,79 @@ a:hover{
     }
 
     #edu-card{
-        width: 90%;
+        width: 70%;
         height: auto;
+    }
+
+    /*mobile blogs*/
+    #blogs{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin-top: 30px;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #blogs > #section-header >.title{
+        font-size: 2rem;
+        margin-bottom: 30px;
+        width: 100%;
+        height: auto;
+    }
+
+    .blog-link{
+        width: 70%;
+    }
+    .blog-card{
+        padding: 15px;
+        height: 15vh;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    /*mobile contact*/
+    #contacts{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin-top: 30px;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contacts > #section-header h1{
+        font-size: 2rem;
+        margin-bottom: 30px;
+        width: 100%;
+        height: auto;
+    }
+
+    #contact-card{
+        height: 10vh;
+        display: flex;
+        width: 70vw;
+        height: auto;
+    }
+
+    .contact-icon{
+        height: 1rem;
+        width: 1rem;
+    }
+
+    #contact-card p{
+        font-size: 1rem;
     }
   }

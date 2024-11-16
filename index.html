@@ -124,7 +124,7 @@ title: Home
         {% if posts_to_display.size > 0 %}
             <!-- Show up to 3 featured blogs -->
             {% for post in posts_to_display %}
-                <a href="{{ post.url | relative_url }}" target="_blank">
+                <a class="blog-link" href="{{ post.url | relative_url }}" target="_blank">
                     <div class="blog-card" id="blog-{{ forloop.index0 }}">
                         <h3>{{ post.title }}</h3>
                         <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
@@ -134,7 +134,7 @@ title: Home
         {% else %}
             <!-- If no featured posts, show the 3 most recent blogs -->
             {% for post in site.posts limit: 3 %}
-                <a href="{{ post.url | relative_url }}" target="_blank">
+                <a class="blog-link" href="{{ post.url | relative_url }}" target="_blank">
                     <div class="blog-card" id="blog-{{ forloop.index0 }}">
                         <h3>{{ post.title }}</h3>
                         <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
