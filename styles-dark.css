@@ -456,9 +456,10 @@ a:hover{
         font-size: 1.5rem;
     }
 
-    #theme {
+    #theme-mobile {
         height: 18px;
         object-fit: cover;
+        filter: invert(1) hue-rotate(180deg);
     }
 
     /*mobile profile*/

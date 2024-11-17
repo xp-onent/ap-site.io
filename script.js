@@ -1,30 +1,35 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const nightModeButton = document.getElementById('theme');
+document.addEventListener('DOMContentLoaded', function () {
+    const nightModeButtonDesktop = document.getElementById('theme');
+    const nightModeButtonMobile = document.getElementById('theme-mobile');
     const styleSheet = document.getElementById('stylesheet');
     const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    if(userPrefersDark){
+    // Set initial theme based on user preference
+    if (userPrefersDark) {
         styleSheet.setAttribute('href', 'styles-dark.css');
-        nightModeButton.setAttribute('src', './assests/sun.png');
-    }
-    else{
+        if (nightModeButtonDesktop) nightModeButtonDesktop.setAttribute('src', './assests/sun.png');
+        if (nightModeButtonMobile) nightModeButtonMobile.setAttribute('src', './assests/sun.png');
+    } else {
         styleSheet.setAttribute('href', 'styles.css');
-        nightModeButton.setAttribute('src', './assests/moon.png');
+        if (nightModeButtonDesktop) nightModeButtonDesktop.setAttribute('src', './assests/moon.png');
+        if (nightModeButtonMobile) nightModeButtonMobile.setAttribute('src', './assests/moon.png');
     }
 
+    // Function to toggle themes
     function toggleMode() {
         if (styleSheet.getAttribute('href') === 'styles.css') {
             styleSheet.setAttribute('href', 'styles-dark.css');
-            nightModeButton.setAttribute('src', './assests/sun.png');
-            initializeScrollTrigger();
+            if (nightModeButtonDesktop) nightModeButtonDesktop.setAttribute('src', './assests/sun.png');
+            if (nightModeButtonMobile) nightModeButtonMobile.setAttribute('src', './assests/sun.png');
         } else {
             styleSheet.setAttribute('href', 'styles.css');
-            nightModeButton.setAttribute('src', './assests/moon.png');
-            initializeScrollTrigger();
+            if (nightModeButtonDesktop) nightModeButtonDesktop.setAttribute('src', './assests/moon.png');
+            if (nightModeButtonMobile) nightModeButtonMobile.setAttribute('src', './assests/moon.png');
         }
-
+        initializeScrollTrigger(); // Reinitialize GSAP scroll triggers if needed
     }
 
+    // GSAP ScrollTrigger initialization
     function initializeScrollTrigger() {
         gsap.registerPlugin(ScrollTrigger);
         const iconPic = document.getElementById('icon-pic');
@@ -67,7 +72,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    initializeScrollTrigger();
+    initializeScrollTrigger(); // Initial GSAP setup
 
-    nightModeButton.addEventListener('click', toggleMode);
+    // Event listeners for both desktop and mobile buttons
+    if (nightModeButtonDesktop) nightModeButtonDesktop.addEventListener('click', toggleMode);
+    if (nightModeButtonMobile) nightModeButtonMobile.addEventListener('click', toggleMode);
 });
