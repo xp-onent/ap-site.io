@@ -105,6 +105,7 @@ nav{
     border: 0.1rem black solid;
     border-radius: 2rem;
     margin-bottom: 2rem;
+    overflow: hidden;
 }
 
 .blog-card:hover{

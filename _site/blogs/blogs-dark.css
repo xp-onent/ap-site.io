@@ -112,6 +112,7 @@ nav .socials {
     border: 0.1rem rgb(206, 202, 202) solid;
     border-radius: 2rem;
     margin-bottom: 2rem;
+    overflow: hidden;
 }
 
 .blog-card:hover{
