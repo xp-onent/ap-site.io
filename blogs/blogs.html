@@ -23,12 +23,20 @@ title: Home
             <div id="theme-btn"><img src="../assests/moon.png" id="theme" alt="moon"></div>
         </div>
     </nav>
+    <!--mobile nav-->
+    <div id="mobile-nav">
+        <div id="nav-1">
+            <img src="../assests/profile.png" alt="">
+            <h1 id="logo">Ayush Pandey</h1>
+        </div>
+        <div id="theme-mobile-btn"><img src="../assests/moon.png" id="theme-mobile" alt="moon"></div>
+    </div>
     <div id="blogs">
         {% for post in site.posts %}
         <a href="{{ post.url | relative_url }}" class="blog-link" target="_blank">
             <div class="blog-card" id="blog-{{ forloop.index0 }}">
                 <h3>{{ post.title }}</h3>
-                <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+                <p class="blog-content">{{ post.excerpt | strip_html | truncate: 160 }}</p>
             </div>
         </a>
             {% endfor %}

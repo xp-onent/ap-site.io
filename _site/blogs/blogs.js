@@ -1,14 +1,18 @@
 function setTheme(themeName) {
     const themeStylesheet = document.getElementById('stylesheet');
-    const themeIcon = document.getElementById('theme');
-    
+    const desktopThemeIcon = document.getElementById('theme');
+    const mobileThemeIcon = document.getElementById('theme-mobile');
+
     localStorage.setItem('theme', themeName);
+
     if (themeName === 'dark') {
         themeStylesheet.setAttribute('href', 'blogs-dark.css');
-        themeIcon.src = '../assests/sun.png'; // Change to sun icon for dark mode
+        if (desktopThemeIcon) desktopThemeIcon.src = '../assests/sun.png'; // Change to sun icon for dark mode
+        if (mobileThemeIcon) mobileThemeIcon.src = '../assests/sun.png';   // Change to sun icon for dark mode
     } else {
         themeStylesheet.setAttribute('href', 'blogs.css');
-        themeIcon.src = '../assests/moon.png'; // Change to moon icon for light mode
+        if (desktopThemeIcon) desktopThemeIcon.src = '../assests/moon.png'; // Change to moon icon for light mode
+        if (mobileThemeIcon) mobileThemeIcon.src = '../assests/moon.png';   // Change to moon icon for light mode
     }
 }
 
@@ -20,10 +24,20 @@ function toggleTheme() {
     }
 }
 
-document.getElementById('theme-btn').addEventListener('click', toggleTheme);
+// Add event listeners for both desktop and mobile theme buttons
+const desktopThemeButton = document.getElementById('theme-btn');
+const mobileThemeButton = document.getElementById('theme-mobile-btn'); // Assuming `theme-mobile-btn` wraps the mobile theme toggle
 
+if (desktopThemeButton) {
+    desktopThemeButton.addEventListener('click', toggleTheme);
+}
+
+if (mobileThemeButton) {
+    mobileThemeButton.addEventListener('click', toggleTheme);
+}
+
+// Initial theme setup
 (function () {
-    // Theme check
     if (localStorage.getItem('theme') === 'dark') {
         setTheme('dark');
     } else {

@@ -28,6 +28,10 @@ nav{
     height: 15vh;
 }
 
+#mobile-nav{
+    display: none;
+}
+
 #nav-1{
     display: flex;
     justify-content: space-around;
@@ -121,4 +125,62 @@ nav .socials {
 
 #blogs a:hover p{
     color:#ece8e8;
+}
+
+/*styles for mobile devices*/
+@media only screen and (max-width: 768px) {
+    nav{
+        display: none;
+    }
+
+    #mobile-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5%;
+        padding-top: 10%;
+        height: 4vh
+    }
+
+    #theme-mobile{
+        height: 18px;
+        object-fit: cover;
+        background-color: transparent;
+        filter: invert(1) hue-rotate(180deg);
+        display: flex;
+    align-items: center;
+    }
+
+    #nav-1 h1{
+        font-size: 1.5rem;
+    }
+
+    #blogs{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+        box-sizing: border-box;
+        height: fit-content;
+        gap: 3vh;
+    }
+
+    .blog-link{
+        width: 90%;
+        height: 10vh;
+    }
+
+    .blog-card{
+        width: 80%;
+        height: 10vh;
+        overflow: hidden;
+        padding: 5%;
+        box-sizing: border-box;
+    }
+
+    .blog-content{
+        display: none;
+    }
 }
