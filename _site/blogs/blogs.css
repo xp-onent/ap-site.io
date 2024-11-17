@@ -135,6 +135,11 @@ nav{
         height: 4vh
     }
 
+    #home-link-mobile{
+        text-decoration: none;
+        color: black;
+    }
+
     #theme-mobile{
         height: 18px;
         object-fit: cover;

@@ -133,6 +133,10 @@ nav .socials {
         display: none;
     }
 
+    #home-link-mobile{
+        text-decoration: none;
+    }
+
     #mobile-nav{
         display: flex;
         justify-content: space-between;
