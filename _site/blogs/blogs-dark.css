@@ -148,7 +148,7 @@ nav .socials {
         background-color: transparent;
         filter: invert(1) hue-rotate(180deg);
         display: flex;
-    align-items: center;
+        align-items: center;
     }
 
     #nav-1 h1{
