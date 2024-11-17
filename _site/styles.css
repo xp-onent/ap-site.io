@@ -61,7 +61,7 @@ section{
     z-index: 10;
 }
 
-#mobile-bav{
+#mobile-nav{
     display: none;
 }
 
@@ -408,3 +408,247 @@ a:hover{
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+/*styles for mobile devices*/
+@media only screen and (max-width: 768px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    section{
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    #icon-pic{
+        display: none;
+    }
+    /*mobile nav*/
+    #desktop-nav {
+        display: none;
+    }
+
+    #mobile-nav {
+        display: flex;
+        justify-content: space-between;
+        height: 4vh;
+        padding: 5%;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    #theme {
+        height: 18px;
+        object-fit: cover;
+    }
+
+    /*mobile profile*/
+    #profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-height: 96vh;
+        padding: 30% 0;
+    }
+    
+    .section-pic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    #me-1 {
+        height: 30vh;
+        width: 30vh;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .section-text-profile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px; 
+    }
+
+    .section-text-profile>p{
+        font-size: 1rem;
+    }
+    .section-text-profile>h1{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    /*mobile about*/
+    #about{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    #about > #section-header > .title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    #about-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #about-pic{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        height: auto;
+    }
+
+    #me-2{
+        height: 30vh;
+        width: 30vh;
+    }
+
+    #about-text{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+
+    .sub-header{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #sub1, #sub2{
+        width: 80%;
+        padding-left: 10%;
+        padding-right: 10%;
+        box-sizing: border-box;
+    }
+
+    .about-para{
+        height: auto;
+    }
+
+    /*mobile education*/
+    #education{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin-top: 30px;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #education > #section-header >.title{
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    #edu-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        padding: 0;
+    }
+
+    #edu-card{
+        width: 70%;
+        height: auto;
+    }
+
+    /*mobile blogs*/
+    #blogs{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin-top: 30px;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #blogs > #section-header >.title{
+        font-size: 2rem;
+        margin-bottom: 30px;
+        width: 100%;
+        height: auto;
+    }
+
+    .blog-link{
+        width: 70%;
+    }
+    .blog-card{
+        padding: 15px;
+        height: 15vh;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    /*mobile contact*/
+    #contacts{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin-top: 30px;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contacts > #section-header h1{
+        font-size: 2rem;
+        margin-bottom: 30px;
+        width: 100%;
+        height: auto;
+    }
+
+    #contact-card{
+        height: 10vh;
+        display: flex;
+        width: 70vw;
+        height: auto;
+    }
+
+    .contact-icon{
+        height: 1rem;
+        width: 1rem;
+    }
+
+    #contact-card p{
+        font-size: 1rem;
+    }
+  }
