@@ -44,3 +44,31 @@ if (mobileThemeButton) {
         setTheme('light');
     }
 })();
+
+function truncateBlogTitles() {
+    const blogTitles = document.querySelectorAll('.blog-card h3');
+
+    blogTitles.forEach((title) => {
+        const originalText = title.getAttribute('data-original-text');
+
+        if (window.innerWidth <= 768) { // Mobile layout
+            if (!originalText) {
+                // Save the original text if not already saved
+                title.setAttribute('data-original-text', title.textContent);
+            }
+
+            if (title.textContent.length > 26) {
+                title.textContent = title.textContent.slice(0, 26) + '...';
+            }
+        } else if (originalText) {
+            // Restore the original text for desktop layout
+            title.textContent = originalText;
+        }
+    });
+}
+
+// Run on load
+truncateBlogTitles();
+
+// Run on resize
+window.addEventListener('resize', truncateBlogTitles);
